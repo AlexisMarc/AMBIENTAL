@@ -33,6 +33,13 @@
 
             <input type="email"  id="emailUsuario" th:field="*{emailUsuario}" placeholder="Ingrese su email" required/>
             <div class="form-text text-danger" th:if="${#fields.hasErrors('emailUsuario')}" th:errors="*{emailUsuario}"></div>
+
+            <label>
+                <h4>Contraseña</h4>
+            </label>
+            <input type="text"  id="claveUsuario" th:field="*{claveUsuario}" placeholder="Ingrese su contraseña" required/>
+            <div class="form-text text-danger" th:if="${#fields.hasErrors('claveUsuario')}" th:errors="*{claveUsuario}"></div>
+
             <label>
                 <h4>rol</h4>
             </label>
@@ -47,7 +54,7 @@
             
         <br>
 
-            <button type="submit" class="botons bg bg-info text-center" hr>Registrar guía</button>
+            <button type="submit" class="botons bg bg-info text-center" hr>Actualizar usuario</button>
 
 
         </section>

@@ -32,7 +32,7 @@ public class UsuarioController {
 
         m.addAttribute("usuario", usuI.findAll());
 
-        return "usuarios";
+        return "views/usuario/usuarios";
     }
 
     // -------------------------------------------------------------REGISTRAR----------------------------------------------------//
@@ -42,14 +42,14 @@ public class UsuarioController {
         Usuario usuario = new Usuario();
         m.addAttribute("usuario", usuario);
 
-        return "registrarUsuarios";
+        return "views/usuario/registrarUsuarios";
     }
 
     // -------------------------------------------------------------ACTUALIZAR----------------------------------------------------//
     @PostMapping("/addUsuario")
     public String addUsuario(@Valid Usuario usuario, BindingResult resultado, Model m, SessionStatus status) {
         if (resultado.hasErrors()) {
-            return "registrarUsuarios";
+            return "views/usuario/registrarUsuarios";
         }
         usuI.save(usuario);
         status.setComplete();
@@ -67,7 +67,7 @@ public class UsuarioController {
         }
         m.addAttribute("usuario", usuario);
 
-        return "editarUsuarios";
+        return "views/usuario/editarUsuarios";
     }
     // -------------------------------------------------------------INICAR SESIÓN----------------------------------------------------//
 

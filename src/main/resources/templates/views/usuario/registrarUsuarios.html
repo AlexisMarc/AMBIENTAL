@@ -26,6 +26,13 @@
             </label>
             <input type="text"  id="apellidoUsuario" th:field="*{apellidoUsuario}" placeholder="Ingrese su apellido" required/>
             <div class="form-text text-danger" th:if="${#fields.hasErrors('apellidoUsuario')}" th:errors="*{apellidoUsuario}"></div>
+            
+            <label>
+                <h4>Contraseña</h4>
+            </label>
+            <input type="text"  id="claveUsuario" th:field="*{claveUsuario}" placeholder="Ingrese su contraseña" required/>
+            <div class="form-text text-danger" th:if="${#fields.hasErrors('claveUsuario')}" th:errors="*{claveUsuario}"></div>
+
             <label>
                 <h4>email</h4>
             </label>
@@ -43,10 +50,10 @@
             </label>
             <input type="checkbox"  class="form-check form-switch"  id="estadoUsuario" th:field="*{estadoUsuario}" />
             <br>
-            
+        
            <br>
 
-            <button type="submit" class="botons bg bg-info text-center" hr>Registrar guía</button>
+            <button type="submit" class="botons bg bg-info text-center" hr>Registrar usuario</button>
 
 
         </section>
