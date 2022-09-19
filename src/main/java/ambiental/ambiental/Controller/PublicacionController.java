@@ -15,6 +15,7 @@ import ambiental.ambiental.Service.PublicacionRepository;
 
 @Controller
 public class PublicacionController {
+  
     @Autowired
     private PublicacionRepository publicacionrepository ;
 
