@@ -3,7 +3,7 @@ package ambiental.ambiental.Service;
 import java.util.List;
 
 import ambiental.ambiental.Model.Usuario;
-
+import org.springframework.data.jpa.repository.Query;
 
 
 public interface IUsuarioService {
@@ -12,4 +12,5 @@ public interface IUsuarioService {
     public void save(Usuario usuario);
     public Usuario findOne(Integer idUsuario);
     public void delete(Integer idUsuario);
+
 }

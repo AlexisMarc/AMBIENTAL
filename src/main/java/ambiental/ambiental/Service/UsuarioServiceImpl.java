@@ -3,6 +3,7 @@ package ambiental.ambiental.Service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import ambiental.ambiental.Model.IUsuario;
@@ -18,7 +19,8 @@ public class UsuarioServiceImpl implements IUsuarioService{
     @Autowired
     private IUsuario usuI;
 
-
+    @Autowired
+    static IUsuarioService iUsuarioService;
     //---------------------------------------MÉTODO PARA MOSTRAR TODOS LOS DATOS--------------------------------------------//
     @Override
      public List<Usuario> findAll() {
@@ -45,7 +47,9 @@ public class UsuarioServiceImpl implements IUsuarioService{
       public void delete(Integer idUsuario) {
       usuI.deleteById(idUsuario);
     }
-    
-        
+
+        //---------------------------------------MÉTODO PARA VALIDAR USUARIO-------------------------------------------//
+
+
 }
 
